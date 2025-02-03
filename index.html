@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteZen - Smart Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NoteZen 📝</h1>
+        <div class="controls">
+            <button id="newNoteBtn">+ New Note</button>
+            <input type="text" id="searchInput" placeholder="Search notes...">
+            <select id="searchType">
+                <option value="all">All</option>
+                <option value="title">Title</option>
+                <option value="content">Content</option>
+                <option value="date">Date</option>
+            </select>
+        </div>
+    </header>
+    
+    <div class="notes-container" id="notesContainer"></div>
+
+    <!-- Note Editor Modal -->
+    <div class="modal" id="editorModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="noteTitle" placeholder="Note Title">
+            <textarea id="noteContent" placeholder="Start writing..."></textarea>
+            <div class="color-picker">
+                <div class="color-option" style="background-color: #fff"></div>
+                <div class="color-option" style="background-color: #ffcccc"></div>
+                <div class="color-option" style="background-color: #ccffcc"></div>
+                <div class="color-option" style="background-color: #cce6ff"></div>
+            </div>
+            <button id="saveNoteBtn">Save Note</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
